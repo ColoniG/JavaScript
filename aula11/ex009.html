@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é extrangeiro? Vamos descobri...</h1>
+    Digite seu pais de nascimento: <input type="text" name="txtn1" id="txtn1"></p>
+    Digite o pais onde mora: <input type="text" name="txtn2" id="txtn2"></p>
+    <input type="button" value="Confira" onclick="conferir()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function conferir() {
+            var nasc = window.document.getElementById('txtn1')       
+            var mora = window.document.getElementById('txtn2')  
+            var res = window.document.getElementById('res')
+            var n1 = String(nasc.value)
+            var n2 = String(mora.value)
+            
+            if (n1 == n2) {
+                res.innerHTML = `<p>Você não é extrangeiro, você é natural da terra!</p>`
+            } else{
+                res.innerHTML = `<p>Você é <strong>extrangeiro</strong>!</p>`
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
+<!--
+var pais = 'EUA'
+if (pais == 'Brasil') {        
+    console.log(`Brasileiro!`)
+} else {
+    console.log('Estrangeiro!')
+}-->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 13pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprenda a usar o <strong>DOM</strong> em JavaScript</p> <!--DOM = Document Object Model-->
+    <div>Clique em mim</div>
+    <div id="msg">Clique em mim 2</div> <!--Com id-->
+
+    <script>
+        window.document.write(window.navigator.appName)  // exemplo de como usar DOM
+        
+        var corpo = window.document.body
+
+        document.write("<br>")
+        
+        var p1 = window.document.getElementsByTagName('p')[0]   // Selecionando o primeiro parágrafo por marca - OBS seleciona o texto sem as "filhas"
+        var p2 = window.document.getElementsByTagName('p')[1]   // Selecionando o segundo parágrafo por marca
+        document.writeln(`${p1.innerText} <br> ${p2.innerText} <br>  <br> ${p2.innerHTML}`)   // Selecionando o segundo parágrafo por marca com as configurações do html/CSS - OBS seleciona o texto com as "filhas"
+
+        p1.style.color = 'red'  // mudou a cor do primeiro parágrafo
+
+        corpo.style.background = 'gray'
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'black'
+
+        // d.innerText = 'Estou mudando o texto...' 
+
+        // d = window.document.querySelector('div#msg')  //  id é para usar #, classe é pra usar .
+
+    </script>    
+
+    
+</body>
+</html>

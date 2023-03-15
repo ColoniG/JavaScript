@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;    /*  Comentários no CSS  */
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(255, 187, 0);
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Olá, mundo!</h1>  <!--Isso é um comentário (OBS forma correta de comentários no HTML)-->
+    <p>Já me livrei da maldição!!</p>
+
+    <script>
+        
+        var n1 = Number.parseInt(window.prompt("Digite um numero: "))
+        var n2 = Number.parseInt(window.prompt("Digite outro numero: "))   //Number.parseInt(n2)
+        var s = n1 + n2
+
+        var n3 = Number(window.prompt("Digite o terceiro numero: "))
+        var n4 = Number(window.prompt("Digite o quarto numero: "))
+
+        alert("A soma dos valores é " + s +"!")
+        alert(`O dobro da soma dos valores é ${s+s}! (Com Template String)`) // Usei Template String
+        alert(`A soma dos valores é ${n1+n2}! (Com Template String não preciso da terceira variável.)`)
+    
+        alert(`A soma entre o 3° e o 4° numero é ${n3+n4}!`)
+
+        var nome = window.prompt("Digite seu nome: ")
+        var nM = nome.toUpperCase()
+        alert(`${nome} e ${nM}`)    
+
+        
+        var sNome = window.prompt("Digite seu sobrenome: ")
+        var sNomeUp = sNome.toUpperCase()
+        alert(`${sNome} e ${sNomeUp}`) 
+
+    </script>
+</body>
+</html>

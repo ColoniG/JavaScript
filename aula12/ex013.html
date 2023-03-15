@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+</head>
+<body>
+    Hojé é: 
+
+    <script>
+        var agora = new Date()
+        var diaSema = agora.getDay()
+        /*
+        0 = Domingo
+        1 = Segunda
+        2 = Terça
+        3 = Quarta
+        4 = Quinta
+        5 = Sexta
+        6 = Sabado
+        */
+        
+        switch (diaSema) {
+            case 0:
+                window.document.write('Domingo')
+                break
+            case 1:
+                window.document.write('Segunda')
+                break
+            case 2:
+                window.document.write('Terça')
+                break
+            case 3:
+                window.document.write('Quarta')
+                break
+            case 4:
+                window.document.write('Quinta')
+                break
+            case 5:
+                window.document.write('Sexta')
+                break
+            case 6:
+                window.document.write('Sábado')
+                break
+            default:
+                window.document.write('{[ERRO!!!] Dia inválido}')
+                break
+        }
+    </script>
+</body>
+</html>
