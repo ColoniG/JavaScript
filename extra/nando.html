@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação de DIVs</title>
+    <style>
+        div > div{
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='pai'>
+        <div class='produtos' contagem='2' style="background-color: red;">2</div>
+        <div class='produtos' contagem='1' style="background-color: blue;">1</div>
+        <div class='produtos' contagem='3' style="background-color: yellow;">3</div>
+    </div>
+
+    <script>
+        // Seleciona as divs que queremos ordenar
+        var divs = document.querySelectorAll('#pai .produtos');
+
+        // Converte a NodeList de divs para array
+        // https://developer.mozilla.org/en/docs/Web/API/NodeList#How_can_I_convert_NodeList_to_Array.3F
+        var ordem = [].map.call(divs, function(element) {
+            return element;
+        });
+
+        // Ordena a array pelo atributo 'contagem'
+        ordem.sort(function(a,b) {
+            var ca = parseInt(a.getAttribute('contagem'), 10);
+            var cb = parseInt(b.getAttribute('contagem'), 10);
+            return cb - ca;
+        });
+
+        // Reinsere os filhos no pai, resultando na ordem desejada
+        var container = document.querySelector('#pai');
+        for(var i=0; i<ordem.length; i++) {
+            container.appendChild(ordem[i]);   
+        }
+    </script>
+</body>
+</html>
