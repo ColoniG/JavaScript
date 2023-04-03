@@ -16,9 +16,11 @@
 </head>
 <body>
     <div id='pai'>
-        <div class='produtos' contagem='2' style="background-color: red;">2</div>
+        <div class='produtos' contagem='4' style="background-color: gray;">4</div>        
         <div class='produtos' contagem='1' style="background-color: blue;">1</div>
+        <div class='produtos' contagem='5' style="background-color: green;">5</div>
         <div class='produtos' contagem='3' style="background-color: yellow;">3</div>
+        <div class='produtos' contagem='2' style="background-color: red;">2</div>
     </div>
 
     <script>
@@ -35,7 +37,7 @@
         ordem.sort(function(a,b) {
             var ca = parseInt(a.getAttribute('contagem'), 10);
             var cb = parseInt(b.getAttribute('contagem'), 10);
-            return cb - ca;
+            return ca - cb;
         });
 
         // Reinsere os filhos no pai, resultando na ordem desejada
